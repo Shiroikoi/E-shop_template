@@ -9,7 +9,7 @@
   export default {
     name: "Carousel",
     data: () => ({
-      src: require("../assets/i.jpg"),
+      src: "",
       items: [
         {},
         {
