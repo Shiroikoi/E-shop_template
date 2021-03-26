@@ -1,13 +1,27 @@
 <template>
   <v-card tile>
-    <v-carousel :show-arrows="false">
-      <v-carousel-item v-for="(item, i) in i" :key="i" :src="i.src"></v-carousel-item>
+    <v-carousel cycle show-arrows-on-hover>
+      <v-carousel-item :src="src"> </v-carousel-item>
     </v-carousel>
   </v-card>
 </template>
 <script>
   export default {
     name: "Carousel",
-    data: () => ({}),
+    data: () => ({
+      src: require("../assets/i.jpg"),
+      items: [
+        {},
+        {
+          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+        },
+        {
+          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+        },
+        {
+          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+        },
+      ],
+    }),
   };
 </script>
